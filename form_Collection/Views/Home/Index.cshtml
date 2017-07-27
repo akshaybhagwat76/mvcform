@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<br />
+@Html.ActionLink("Create New","AddStudent")
+<br />
+<br />
+<table>
+    <tr>
+        <th>Student ID</th>
+        <th>First Name</th>
+        <th>Age</th>
+    </tr>
+    @foreach (var item in ViewData["list"] as List<form_Collection.Models.student>)
+    {
+        <tr>
+            <td>@item.student_id</td>
+            <td>@item.f_name</td>
+            <td>@item.age</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { id = item.student_id })</td>
+            <td>@Html.ActionLink("Delete", "Delete", new { id=item.student_id })</td>
+        </tr>
+    }
+</table>

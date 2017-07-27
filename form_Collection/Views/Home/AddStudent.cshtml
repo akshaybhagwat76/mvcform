@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "AddStudent";
+}
+
+<h2>AddStudent</h2>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <th>First Name</th>
+            <td>
+                <input type="text" name="txtfn" />
+            </td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td>
+                <input type="text" name="txtag" />
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input id="Submit1" type="submit" value="Insert" />
+            </td>
+        </tr>
+    </table>
+}
+

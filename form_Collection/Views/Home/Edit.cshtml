@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    var item=ViewData["edit"] as form_Collection.Models.student;
+    <table>
+        <tr>
+            <th>Student ID</th>
+            <td>
+                <input type="text" name="txtid" readonly="readonly" value="@item.student_id" />
+            </td>
+        </tr>
+        <tr>
+            <th>First Name</th>
+            <td>
+                <input type="text" name="txtfn" value="@item.f_name" />
+            </td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td>
+                <input type="text" name="txtag" value="@item.age" />
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input id="Submit1" type="submit" value="Update" />
+            </td>
+        </tr>
+    </table>
+}
